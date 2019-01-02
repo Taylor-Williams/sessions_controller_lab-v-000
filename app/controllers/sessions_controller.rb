@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
 
   def destroy
     if session[:name]
-      session.destroy("username")
+      session.destroy("name")
     end
   end
 
