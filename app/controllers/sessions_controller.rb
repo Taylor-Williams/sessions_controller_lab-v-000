@@ -19,4 +19,9 @@ class SessionsController < ApplicationController
       session.destroy("username")
     end
   end
+
+  private
+  def logged_in?
+    !!session[:username]
+  end
 end
