@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
     end
     if params[:name] && params[:name] != ''
       session[:username] = params[:name]
+      redirect_to '/login'
     else
       redirect_to '/login'
     end
