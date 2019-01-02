@@ -3,6 +3,11 @@ class SessionsController < ApplicationController
   end
 
   def create
+    if params[:name] && params[:name] != ''
+      
+    else
+      redirect_to '/login'
+      
   end
 
   def destroy
