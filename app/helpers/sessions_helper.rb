@@ -1,6 +1,6 @@
 module SessionsHelper
 
-  def logged_in?
+  def self.logged_in?
     !!session[:username]
   end
 end
