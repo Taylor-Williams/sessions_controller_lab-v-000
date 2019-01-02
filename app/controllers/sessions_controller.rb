@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
       session[:username] = params[:name]
     else
       redirect_to '/login'
-
+    end
   end
 
   def destroy
