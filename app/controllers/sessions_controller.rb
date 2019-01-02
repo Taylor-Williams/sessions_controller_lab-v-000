@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
+    if logged_in?
     if params[:name] && params[:name] != ''
       session[:username] = params[:name]
     else
