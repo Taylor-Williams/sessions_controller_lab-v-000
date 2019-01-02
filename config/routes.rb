@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
-
-  post 'sessions/create'
-
-  post 'logout' => 'sessions#destroy'
 
   root 'application#hello'
   get '/login' => 'sessions#new'
