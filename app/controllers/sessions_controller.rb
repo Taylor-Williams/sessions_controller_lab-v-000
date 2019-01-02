@@ -6,8 +6,8 @@ class SessionsController < ApplicationController
     if logged_in?
       redirect_to '/'
     end
-    if params[:name] && params[:name] != ''
-      session[:username] = params[:name]
+    if params[:username] && params[:username] != ''
+      session[:username] = params[:username]
       redirect_to '/'
     else
       redirect_to '/login'
@@ -15,5 +15,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    if session[:username]
+      session.destroy("username")
+    end
   end
 end
